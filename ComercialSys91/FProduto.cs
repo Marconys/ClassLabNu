@@ -25,14 +25,28 @@ namespace ComercialSys91
 
         private void btn_Inserir_Click(object sender, EventArgs e)
         {
-            Produto produtos = new Produto(
+            try
+            {
+                Produto produtos = new Produto(
                 tb_descricao.Text,
                 tb_codbar.Text,
                 tb_unidade.Text,
                 Double.Parse(tb_valor.Text),
                 Double.Parse(tb_desconto.Text));
 
-            produtos.Inserir();
+                produtos.Inserir();
+
+                MessageBox.Show("Produto Inserido com Sucesso");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro na Inserção de produtos");
+            }
+            
+            
+
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)

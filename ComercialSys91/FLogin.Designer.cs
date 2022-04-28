@@ -44,7 +44,7 @@
             this.btn_Logar.Location = new System.Drawing.Point(12, 115);
             this.btn_Logar.Name = "btn_Logar";
             this.btn_Logar.Size = new System.Drawing.Size(71, 23);
-            this.btn_Logar.TabIndex = 0;
+            this.btn_Logar.TabIndex = 4;
             this.btn_Logar.Text = "Logar";
             this.btn_Logar.UseVisualStyleBackColor = true;
             this.btn_Logar.Click += new System.EventHandler(this.btn_Logar_Click);
@@ -83,7 +83,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(113, 115);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(71, 23);
-            this.btn_cancelar.TabIndex = 4;
+            this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -92,9 +92,9 @@
             // 
             this.tb_senha.Location = new System.Drawing.Point(12, 78);
             this.tb_senha.Name = "tb_senha";
-            this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(172, 20);
-            this.tb_senha.TabIndex = 5;
+            this.tb_senha.TabIndex = 3;
+            this.tb_senha.UseSystemPasswordChar = true;
             // 
             // lb_errologin
             // 

@@ -56,7 +56,22 @@ namespace ComercialSys91
 
         private void btn_listar_Click(object sender, EventArgs e)
         {
-           
+            dgv_produtos.Rows.Clear();
+            List<Produto> listadeprodutos = Produto.Listar();
+            int cont = 0;
+            foreach (Produto produtos in listadeprodutos)
+            {
+                dgv_produtos.Rows.Add();
+                dgv_produtos.Rows[cont].Cells[0].Value = produtos.Id.ToString();
+                dgv_produtos.Rows[cont].Cells[1].Value = produtos.Descricao.ToString();
+                dgv_produtos.Rows[cont].Cells[2].Value = produtos.Unidade.ToString();
+                dgv_produtos.Rows[cont].Cells[3].Value = produtos.Codbar.ToString();
+                dgv_produtos.Rows[cont].Cells[4].Value = produtos.Desconto.ToString();
+                dgv_produtos.Rows[cont].Cells[5].Value = produtos.Valor.ToString();
+                dgv_produtos.Rows[cont].Cells[6].Value = produtos.Descontinuado;
+
+                cont++;
+            }
         }
 
         private void dgv_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -46,6 +46,16 @@ namespace ClassLabNu
 
         }
 
+        public Produto(int id, string descricao, string unidade, string codbar, double valor, double desconto)
+        {
+            Id = id;
+            this.Descricao = descricao;
+            this.Unidade = unidade;
+            this.Codbar = codbar;
+            this.Valor = valor;
+            this.Desconto = desconto;
+        }
+
 
         public Produto(string descricao, string unidade, string codbar, double valor, double desconto)
         {
@@ -163,7 +173,7 @@ namespace ClassLabNu
             List<Produto> produtos = new List<Produto>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from produtos order by nome";
+            cmd.CommandText = "select * from produtos order by idprod";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -173,8 +183,8 @@ namespace ClassLabNu
                     dr.GetString(2),
                     dr.GetString(3),
                     dr.GetDouble(4),
-                    dr.GetDouble(5),
-                    dr.GetBoolean(6)
+                    dr.GetDouble(5)
+                   // dr.GetBoolean(6)
                     ));
             }
             return produtos;

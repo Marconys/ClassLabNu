@@ -45,12 +45,13 @@
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_listar = new System.Windows.Forms.Button();
             this.dgv_produtos = new System.Windows.Forms.DataGridView();
+            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             this.IDcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descriçaocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidadecl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Código_de_Barrascl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valorcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descontocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,14 +194,25 @@
             this.IDcl,
             this.Descriçaocl,
             this.Unidadecl,
+            this.Código_de_Barrascl,
             this.Valorcl,
             this.Descontocl});
             this.dgv_produtos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_produtos.Location = new System.Drawing.Point(0, 245);
             this.dgv_produtos.Name = "dgv_produtos";
-            this.dgv_produtos.Size = new System.Drawing.Size(541, 234);
+            this.dgv_produtos.Size = new System.Drawing.Size(727, 234);
             this.dgv_produtos.TabIndex = 18;
             this.dgv_produtos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_produtos_CellContentClick);
+            // 
+            // cb_disponivel
+            // 
+            this.cb_disponivel.AutoSize = true;
+            this.cb_disponivel.Location = new System.Drawing.Point(426, 121);
+            this.cb_disponivel.Name = "cb_disponivel";
+            this.cb_disponivel.Size = new System.Drawing.Size(77, 17);
+            this.cb_disponivel.TabIndex = 19;
+            this.cb_disponivel.Text = "Disponível";
+            this.cb_disponivel.UseVisualStyleBackColor = true;
             // 
             // IDcl
             // 
@@ -217,6 +229,11 @@
             this.Unidadecl.HeaderText = "Unidade";
             this.Unidadecl.Name = "Unidadecl";
             // 
+            // Código_de_Barrascl
+            // 
+            this.Código_de_Barrascl.HeaderText = "Cod de Barras";
+            this.Código_de_Barrascl.Name = "Código_de_Barrascl";
+            // 
             // Valorcl
             // 
             this.Valorcl.HeaderText = "Valor";
@@ -227,21 +244,11 @@
             this.Descontocl.HeaderText = "Desconto";
             this.Descontocl.Name = "Descontocl";
             // 
-            // cb_disponivel
-            // 
-            this.cb_disponivel.AutoSize = true;
-            this.cb_disponivel.Location = new System.Drawing.Point(426, 121);
-            this.cb_disponivel.Name = "cb_disponivel";
-            this.cb_disponivel.Size = new System.Drawing.Size(77, 17);
-            this.cb_disponivel.TabIndex = 19;
-            this.cb_disponivel.Text = "Disponível";
-            this.cb_disponivel.UseVisualStyleBackColor = true;
-            // 
             // FProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 479);
+            this.ClientSize = new System.Drawing.Size(727, 479);
             this.Controls.Add(this.cb_disponivel);
             this.Controls.Add(this.dgv_produtos);
             this.Controls.Add(this.btn_listar);
@@ -287,11 +294,12 @@
         private System.Windows.Forms.Button btn_consultar;
         private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.DataGridView dgv_produtos;
+        private System.Windows.Forms.CheckBox cb_disponivel;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDcl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descriçaocl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidadecl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código_de_Barrascl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valorcl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descontocl;
-        private System.Windows.Forms.CheckBox cb_disponivel;
     }
 }

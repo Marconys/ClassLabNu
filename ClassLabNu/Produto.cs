@@ -118,7 +118,8 @@ namespace ClassLabNu
                 produtos.Unidade = dr.GetString(2);
                 produtos.Codbar = dr.GetString(3);
                 produtos.Valor = Convert.ToDouble(dr["valor"]);
-                
+                produtos.Desconto = Convert.ToDouble(dr["desconto"]);
+
             }
             return produtos;
         }

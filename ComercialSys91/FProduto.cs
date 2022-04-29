@@ -36,6 +36,12 @@ namespace ComercialSys91
 
                 produtos.Inserir();
 
+                tb_codbar.Clear();
+                tb_valor.Clear();
+                tb_unidade.Clear();
+                tb_descricao.Clear();
+                tb_desconto.Clear();
+
                 MessageBox.Show("Produto Inserido com Sucesso");
 
             }
@@ -52,6 +58,32 @@ namespace ComercialSys91
         private void btn_consultar_Click(object sender, EventArgs e)
         {
 
+            Produto produto = Produto.ConsultarPorCodbar(tb_codbar.Text);
+            
+            try
+            {
+                if (produto.Id > 0)
+                {
+                    tb_Id.Text = produto.Id.ToString();
+                    tb_codbar.Text = produto.Codbar.ToString();
+                    tb_unidade.Text = produto.Unidade.ToString();
+                    tb_descricao.Text = produto.Descricao.ToString();
+                    tb_valor.Text = produto.Valor.ToString();
+                    tb_desconto.Text = produto.Desconto.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Produto Não Encontrado");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(Text, ex.Message);
+            }
         }
 
         private void btn_listar_Click(object sender, EventArgs e)

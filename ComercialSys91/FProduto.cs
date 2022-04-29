@@ -64,12 +64,18 @@ namespace ComercialSys91
             {
                 if (produto.Id > 0)
                 {
+                    
+
                     tb_Id.Text = produto.Id.ToString();
                     tb_codbar.Text = produto.Codbar.ToString();
                     tb_unidade.Text = produto.Unidade.ToString();
                     tb_descricao.Text = produto.Descricao.ToString();
                     tb_valor.Text = produto.Valor.ToString();
                     tb_desconto.Text = produto.Desconto.ToString();
+
+                    string consulta = "Produto " + tb_descricao.Text + " QTD " + tb_unidade.Text + " Unidades " + "Valor R$ " + tb_valor.Text
+                        + " Possui desconto de R$ " + tb_desconto.Text;
+                    tb_descricao.Text =  consulta;                   
 
                 }
                 else

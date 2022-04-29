@@ -45,13 +45,13 @@
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_listar = new System.Windows.Forms.Button();
             this.dgv_produtos = new System.Windows.Forms.DataGridView();
-            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             this.IDcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descriçaocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidadecl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Código_de_Barrascl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valorcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descontocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,16 +204,6 @@
             this.dgv_produtos.TabIndex = 18;
             this.dgv_produtos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_produtos_CellContentClick);
             // 
-            // cb_disponivel
-            // 
-            this.cb_disponivel.AutoSize = true;
-            this.cb_disponivel.Location = new System.Drawing.Point(426, 121);
-            this.cb_disponivel.Name = "cb_disponivel";
-            this.cb_disponivel.Size = new System.Drawing.Size(77, 17);
-            this.cb_disponivel.TabIndex = 19;
-            this.cb_disponivel.Text = "Disponível";
-            this.cb_disponivel.UseVisualStyleBackColor = true;
-            // 
             // IDcl
             // 
             this.IDcl.HeaderText = "ID";
@@ -243,6 +233,16 @@
             // 
             this.Descontocl.HeaderText = "Desconto";
             this.Descontocl.Name = "Descontocl";
+            // 
+            // cb_disponivel
+            // 
+            this.cb_disponivel.AutoSize = true;
+            this.cb_disponivel.Location = new System.Drawing.Point(426, 121);
+            this.cb_disponivel.Name = "cb_disponivel";
+            this.cb_disponivel.Size = new System.Drawing.Size(77, 17);
+            this.cb_disponivel.TabIndex = 19;
+            this.cb_disponivel.Text = "Disponível";
+            this.cb_disponivel.UseVisualStyleBackColor = true;
             // 
             // FProduto
             // 
@@ -284,22 +284,22 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tb_Id;
-        private System.Windows.Forms.TextBox tb_codbar;
-        private System.Windows.Forms.TextBox tb_unidade;
-        private System.Windows.Forms.TextBox tb_valor;
-        private System.Windows.Forms.TextBox tb_desconto;
-        private System.Windows.Forms.TextBox tb_descricao;
         private System.Windows.Forms.Button btn_Inserir;
         private System.Windows.Forms.Button btn_consultar;
         private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.DataGridView dgv_produtos;
-        private System.Windows.Forms.CheckBox cb_disponivel;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDcl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descriçaocl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidadecl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código_de_Barrascl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valorcl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descontocl;
+        public System.Windows.Forms.TextBox tb_Id;
+        public System.Windows.Forms.TextBox tb_codbar;
+        public System.Windows.Forms.TextBox tb_unidade;
+        public System.Windows.Forms.TextBox tb_valor;
+        public System.Windows.Forms.TextBox tb_desconto;
+        public System.Windows.Forms.TextBox tb_descricao;
+        public System.Windows.Forms.CheckBox cb_disponivel;
     }
 }

@@ -34,6 +34,7 @@
             this.clnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnlLisar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +46,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.Ativocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_BuscarUser = new System.Windows.Forms.Button();
+            this.cb_nivel = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +101,15 @@
             this.clnEmail.ReadOnly = true;
             this.clnEmail.Width = 130;
             // 
+            // Ativocl
+            // 
+            this.Ativocl.HeaderText = "Ativo";
+            this.Ativocl.Name = "Ativocl";
+            this.Ativocl.ReadOnly = true;
+            // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(47, 108);
+            this.btnInserir.Location = new System.Drawing.Point(189, 113);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 21;
@@ -110,7 +119,7 @@
             // 
             // btnlLisar
             // 
-            this.btnlLisar.Location = new System.Drawing.Point(390, 108);
+            this.btnlLisar.Location = new System.Drawing.Point(452, 113);
             this.btnlLisar.Name = "btnlLisar";
             this.btnlLisar.Size = new System.Drawing.Size(75, 23);
             this.btnlLisar.TabIndex = 20;
@@ -121,7 +130,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 58);
+            this.label4.Location = new System.Drawing.Point(9, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 19;
@@ -130,7 +139,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 58);
+            this.label3.Location = new System.Drawing.Point(379, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 18;
@@ -139,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 15);
+            this.label2.Location = new System.Drawing.Point(186, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 17;
@@ -159,23 +168,23 @@
             this.txtId.Location = new System.Drawing.Point(47, 12);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(61, 20);
+            this.txtId.Size = new System.Drawing.Size(41, 20);
             this.txtId.TabIndex = 15;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(71, 55);
+            this.txtSenha.Location = new System.Drawing.Point(423, 59);
             this.txtSenha.MaxLength = 32;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(87, 20);
+            this.txtSenha.Size = new System.Drawing.Size(114, 20);
             this.txtSenha.TabIndex = 14;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(227, 55);
+            this.txtEmail.Location = new System.Drawing.Point(47, 59);
             this.txtEmail.MaxLength = 60;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(310, 20);
@@ -184,16 +193,16 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(168, 12);
+            this.txtNome.Location = new System.Drawing.Point(227, 12);
             this.txtNome.MaxLength = 60;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(369, 20);
+            this.txtNome.Size = new System.Drawing.Size(310, 20);
             this.txtNome.TabIndex = 12;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(227, 108);
+            this.btnAlterar.Location = new System.Drawing.Point(318, 113);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 23;
@@ -201,17 +210,40 @@
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // Ativocl
+            // btn_BuscarUser
             // 
-            this.Ativocl.HeaderText = "Ativo";
-            this.Ativocl.Name = "Ativocl";
-            this.Ativocl.ReadOnly = true;
+            this.btn_BuscarUser.Location = new System.Drawing.Point(94, 12);
+            this.btn_BuscarUser.Name = "btn_BuscarUser";
+            this.btn_BuscarUser.Size = new System.Drawing.Size(35, 20);
+            this.btn_BuscarUser.TabIndex = 24;
+            this.btn_BuscarUser.Text = "...";
+            this.btn_BuscarUser.UseVisualStyleBackColor = true;
+            // 
+            // cb_nivel
+            // 
+            this.cb_nivel.FormattingEnabled = true;
+            this.cb_nivel.Location = new System.Drawing.Point(37, 113);
+            this.cb_nivel.Name = "cb_nivel";
+            this.cb_nivel.Size = new System.Drawing.Size(121, 21);
+            this.cb_nivel.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Nível";
             // 
             // FUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 329);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cb_nivel);
+            this.Controls.Add(this.btn_BuscarUser);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnInserir);
@@ -254,5 +286,8 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ativocl;
+        private System.Windows.Forms.Button btn_BuscarUser;
+        private System.Windows.Forms.ComboBox cb_nivel;
+        private System.Windows.Forms.Label label5;
     }
 }

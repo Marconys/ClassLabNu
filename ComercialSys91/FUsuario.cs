@@ -21,13 +21,11 @@ namespace ComercialSys91
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            
-
-            Usuario usuario = new Usuario(txtNome.Text, txtEmail.Text,txtSenha.Text);
-
            
 
-            
+            Usuario usuario = new Usuario(txtNome.Text, txtEmail.Text, txtSenha.Text);
+             
+
 
             usuario.Inserir();
 

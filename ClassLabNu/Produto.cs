@@ -96,7 +96,7 @@ namespace ClassLabNu
             cmd.Parameters.AddWithValue("_codbar", Codbar);
             cmd.Parameters.AddWithValue("_valor", Valor);
             cmd.Parameters.AddWithValue("_desconto", Desconto);
-           // cmd.Parameters.AddWithValue("_descontinuado", Descontinuado);
+            cmd.Parameters.AddWithValue("_descontinuado", Descontinuado);
             cmd.ExecuteNonQuery();
             // Fecha Conexão
             cmd.Connection.Close();
@@ -119,6 +119,7 @@ namespace ClassLabNu
                 produtos.Codbar = dr.GetString(3);
                 produtos.Valor = Convert.ToDouble(dr["valor"]);
                 produtos.Desconto = Convert.ToDouble(dr["desconto"]);
+                produtos.Descontinuado = dr.GetBoolean(6);
 
             }
             return produtos;

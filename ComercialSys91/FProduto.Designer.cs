@@ -51,8 +51,8 @@
             this.Código_de_Barrascl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valorcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descontocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             this.Statuscl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cb_disponivel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -236,6 +236,11 @@
             this.Descontocl.HeaderText = "Desconto";
             this.Descontocl.Name = "Descontocl";
             // 
+            // Statuscl
+            // 
+            this.Statuscl.HeaderText = "Status";
+            this.Statuscl.Name = "Statuscl";
+            // 
             // cb_disponivel
             // 
             this.cb_disponivel.AutoSize = true;
@@ -245,11 +250,6 @@
             this.cb_disponivel.TabIndex = 19;
             this.cb_disponivel.Text = "Disponível";
             this.cb_disponivel.UseVisualStyleBackColor = true;
-            // 
-            // Statuscl
-            // 
-            this.Statuscl.HeaderText = "Status";
-            this.Statuscl.Name = "Statuscl";
             // 
             // FProduto
             // 

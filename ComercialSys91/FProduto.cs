@@ -33,6 +33,7 @@ namespace ComercialSys91
                 tb_codbar.Text,                
                 Double.Parse(tb_valor.Text),
                 Double.Parse(tb_desconto.Text));
+                cb_disponivel.Checked = false;
 
                 produtos.Inserir();
 
@@ -48,7 +49,7 @@ namespace ComercialSys91
             catch (Exception ex)
             {
 
-                MessageBox.Show("Erro na Inserção de produtos");
+                MessageBox.Show("Erro na Inserção de produtos " + Text, ex.Message);
             }
             
             
@@ -72,6 +73,8 @@ namespace ComercialSys91
                     tb_descricao.Text = produto.Descricao.ToString();
                     tb_valor.Text = produto.Valor.ToString();
                     tb_desconto.Text = produto.Desconto.ToString();
+                    cb_disponivel.Checked = produto.Descontinuado;
+                    
 
                     string consulta = "Produto " + tb_descricao.Text + " QTD " + tb_unidade.Text + " Unidades " + "Valor R$ " + tb_valor.Text
                         + " Possui desconto de R$ " + tb_desconto.Text;
@@ -108,7 +111,7 @@ namespace ComercialSys91
                     dgv_produtos.Rows[cont].Cells[3].Value = produtos.Codbar.ToString();
                     dgv_produtos.Rows[cont].Cells[4].Value = produtos.Valor.ToString();
                     dgv_produtos.Rows[cont].Cells[5].Value = produtos.Desconto.ToString();
-                   // dgv_produtos.Rows[cont].Cells[6].Value = produtos.Descontinuado;
+                    dgv_produtos.Rows[cont].Cells[6].Value = produtos.Descontinuado;
 
                     cont++;
                 }

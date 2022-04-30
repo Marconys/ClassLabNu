@@ -45,7 +45,8 @@ namespace ComercialSys91
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         private void novoToolStripMenuItem1_Click(object sender, EventArgs e)

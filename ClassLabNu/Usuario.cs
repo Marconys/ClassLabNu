@@ -31,7 +31,6 @@ namespace ClassLabNu
             Id = id;
             Nome = nome;
             Email = email;
-
             Senha = senha;
         }
 
@@ -67,11 +66,11 @@ namespace ClassLabNu
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_usuarios_inserir";
+            cmd.CommandText = "sp_usuario_inserir";
             cmd.Parameters.AddWithValue("_nome", Nome);
             cmd.Parameters.AddWithValue("_senha", Senha);
             cmd.Parameters.AddWithValue("_email", Email);
-            cmd.Parameters.AddWithValue("_idnv", Nivel);
+            cmd.Parameters.AddWithValue("_nivel", Nivel);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Close();
         }

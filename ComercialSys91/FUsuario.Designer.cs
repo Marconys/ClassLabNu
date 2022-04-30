@@ -46,8 +46,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.clnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nívelcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ativocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -61,8 +61,8 @@
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnId,
             this.clnNome,
-            this.clnSenha,
             this.clnEmail,
+            this.clnSenha,
             this.Nívelcl,
             this.Ativocl});
             this.dgvUsuarios.Location = new System.Drawing.Point(15, 167);
@@ -220,14 +220,6 @@
             this.clnNome.Name = "clnNome";
             this.clnNome.ReadOnly = true;
             // 
-            // clnSenha
-            // 
-            this.clnSenha.Frozen = true;
-            this.clnSenha.HeaderText = "Senha";
-            this.clnSenha.Name = "clnSenha";
-            this.clnSenha.ReadOnly = true;
-            this.clnSenha.Width = 150;
-            // 
             // clnEmail
             // 
             this.clnEmail.Frozen = true;
@@ -235,6 +227,14 @@
             this.clnEmail.Name = "clnEmail";
             this.clnEmail.ReadOnly = true;
             this.clnEmail.Width = 130;
+            // 
+            // clnSenha
+            // 
+            this.clnSenha.Frozen = true;
+            this.clnSenha.HeaderText = "Senha";
+            this.clnSenha.Name = "clnSenha";
+            this.clnSenha.ReadOnly = true;
+            this.clnSenha.Width = 150;
             // 
             // Nívelcl
             // 
@@ -298,8 +298,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnSenha;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnSenha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nívelcl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ativocl;
     }

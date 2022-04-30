@@ -21,7 +21,13 @@ namespace ComercialSys91
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario (txtNome.Text, txtEmail.Text, txtSenha.Text);
+            
+
+            Usuario usuario = new Usuario(txtNome.Text, txtEmail.Text,txtSenha.Text);
+
+           
+
+            
 
             usuario.Inserir();
 
@@ -52,10 +58,11 @@ namespace ComercialSys91
             {
                 dgvUsuarios.Rows.Add();
                 dgvUsuarios.Rows[cont].Cells[0].Value = usuario.Id.ToString();
-                dgvUsuarios.Rows[cont].Cells[1].Value = usuario.Nome.ToString();
-                dgvUsuarios.Rows[cont].Cells[2].Value = usuario.Email.ToString();
-                dgvUsuarios.Rows[cont].Cells[3].Value = usuario.Senha.ToString();
-                dgvUsuarios.Rows[cont].Cells[4].Value = usuario.Ativo;
+                dgvUsuarios.Rows[cont].Cells[1].Value = usuario.Nome.ToString();                
+                dgvUsuarios.Rows[cont].Cells[2].Value = usuario.Senha.ToString();
+                dgvUsuarios.Rows[cont].Cells[3].Value = usuario.Email.ToString();
+                dgvUsuarios.Rows[cont].Cells[4].Value = usuario.Nivel.Nome.ToString();
+                dgvUsuarios.Rows[cont].Cells[5].Value = usuario.Ativo;
 
                 cont++;
             }

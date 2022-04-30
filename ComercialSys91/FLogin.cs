@@ -55,6 +55,7 @@ namespace ComercialSys91
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+           
         }
 
         private void FLogin_Load(object sender, EventArgs e)

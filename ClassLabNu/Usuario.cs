@@ -71,6 +71,7 @@ namespace ClassLabNu
             cmd.Parameters.AddWithValue("_nome", Nome);
             cmd.Parameters.AddWithValue("_senha", Senha);
             cmd.Parameters.AddWithValue("_email", Email);
+            cmd.Parameters.AddWithValue("_idnv", Nivel);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Close();
         }
@@ -146,7 +147,7 @@ namespace ClassLabNu
                    dr.GetString(2),
                    dr.GetString(3),
                    Nivel.ConsultarPorId(dr.GetInt32(4)),
-                dr.GetBoolean(5)
+                    dr.GetBoolean(5)
                     ));
             }
             return usuarios;

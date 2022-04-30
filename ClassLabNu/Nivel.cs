@@ -39,6 +39,7 @@ namespace ClassLabNu
             this.sigla = sigla;
             
         }
+        
         // Métodos da classe
         public void InserirNovo()
         {

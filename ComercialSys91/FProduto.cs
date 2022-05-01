@@ -27,13 +27,13 @@ namespace ComercialSys91
         {
             try
             {
-                Produto produtos = new Produto(
+                Produto produtos =  new Produto(
                 tb_descricao.Text,
                 tb_unidade.Text,
-                tb_codbar.Text,                
+                tb_codbar.Text,
                 Double.Parse(tb_valor.Text),
-                Double.Parse(tb_desconto.Text));
-                cb_disponivel.Checked = false;
+                Double.Parse(tb_desconto.Text),
+                Convert.ToBoolean(cb_disponivel.Checked));
 
                 produtos.Inserir();
 
@@ -126,6 +126,16 @@ namespace ComercialSys91
         }
 
         private void dgv_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cb_disponivel_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_disponivel_CheckStateChanged(object sender, EventArgs e)
         {
 
         }

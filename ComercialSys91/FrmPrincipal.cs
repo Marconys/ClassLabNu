@@ -41,6 +41,25 @@ namespace ComercialSys91
             FLogin fLogin = new FLogin();
             fLogin.ShowDialog();
             lb_nome.Text = Program.usuario.Nome;
+            if (Program.usuario != null)
+            {
+                toolStripStatusNivellogado.Text = Program.usuario.Nivel.Sigla + " - " + Program.usuario.Nivel.Nome;
+                switch (Program.usuario.Nivel.Sigla)
+                {
+                    case "gr":
+                        this.statusStripMain.BackColor = Color.LightGreen;
+                        break;
+                    case "at":
+                        this.statusStripMain.BackColor = Color.LightYellow;
+                        break;
+                    case "cx":
+                        this.statusStripMain.BackColor = Color.LightBlue;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)

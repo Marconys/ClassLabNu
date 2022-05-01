@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUsuario));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.clnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nívelcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnlLisar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,12 +50,6 @@
             this.btn_BuscarUser = new System.Windows.Forms.Button();
             this.cb_nivel = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.clnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nívelcl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativocl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,49 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(638, 236);
             this.dgvUsuarios.TabIndex = 22;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            // 
+            // clnId
+            // 
+            this.clnId.Frozen = true;
+            this.clnId.HeaderText = "ID";
+            this.clnId.Name = "clnId";
+            this.clnId.ReadOnly = true;
+            this.clnId.Width = 50;
+            // 
+            // clnNome
+            // 
+            this.clnNome.Frozen = true;
+            this.clnNome.HeaderText = "Nome";
+            this.clnNome.Name = "clnNome";
+            this.clnNome.ReadOnly = true;
+            // 
+            // clnEmail
+            // 
+            this.clnEmail.Frozen = true;
+            this.clnEmail.HeaderText = "Email";
+            this.clnEmail.Name = "clnEmail";
+            this.clnEmail.ReadOnly = true;
+            this.clnEmail.Width = 130;
+            // 
+            // clnSenha
+            // 
+            this.clnSenha.Frozen = true;
+            this.clnSenha.HeaderText = "Senha";
+            this.clnSenha.Name = "clnSenha";
+            this.clnSenha.ReadOnly = true;
+            this.clnSenha.Width = 150;
+            // 
+            // Nívelcl
+            // 
+            this.Nívelcl.HeaderText = "Nivel";
+            this.Nívelcl.Name = "Nívelcl";
+            this.Nívelcl.ReadOnly = true;
+            // 
+            // Ativocl
+            // 
+            this.Ativocl.HeaderText = "Ativo";
+            this.Ativocl.Name = "Ativocl";
+            this.Ativocl.ReadOnly = true;
             // 
             // btnInserir
             // 
@@ -195,6 +238,8 @@
             this.cb_nivel.Name = "cb_nivel";
             this.cb_nivel.Size = new System.Drawing.Size(121, 21);
             this.cb_nivel.TabIndex = 25;
+            this.cb_nivel.SelectedIndexChanged += new System.EventHandler(this.cb_nivel_SelectedIndexChanged);
+            this.cb_nivel.SelectedValueChanged += new System.EventHandler(this.cb_nivel_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -204,49 +249,6 @@
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 26;
             this.label5.Text = "Nível";
-            // 
-            // clnId
-            // 
-            this.clnId.Frozen = true;
-            this.clnId.HeaderText = "ID";
-            this.clnId.Name = "clnId";
-            this.clnId.ReadOnly = true;
-            this.clnId.Width = 50;
-            // 
-            // clnNome
-            // 
-            this.clnNome.Frozen = true;
-            this.clnNome.HeaderText = "Nome";
-            this.clnNome.Name = "clnNome";
-            this.clnNome.ReadOnly = true;
-            // 
-            // clnEmail
-            // 
-            this.clnEmail.Frozen = true;
-            this.clnEmail.HeaderText = "Email";
-            this.clnEmail.Name = "clnEmail";
-            this.clnEmail.ReadOnly = true;
-            this.clnEmail.Width = 130;
-            // 
-            // clnSenha
-            // 
-            this.clnSenha.Frozen = true;
-            this.clnSenha.HeaderText = "Senha";
-            this.clnSenha.Name = "clnSenha";
-            this.clnSenha.ReadOnly = true;
-            this.clnSenha.Width = 150;
-            // 
-            // Nívelcl
-            // 
-            this.Nívelcl.HeaderText = "Nivel";
-            this.Nívelcl.Name = "Nívelcl";
-            this.Nívelcl.ReadOnly = true;
-            // 
-            // Ativocl
-            // 
-            this.Ativocl.HeaderText = "Ativo";
-            this.Ativocl.Name = "Ativocl";
-            this.Ativocl.ReadOnly = true;
             // 
             // FUsuario
             // 

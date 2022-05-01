@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
+
+
 namespace ClassLabNu
 {
     // Documentação de classes de projeto. - XML Docs 
@@ -64,15 +66,24 @@ namespace ClassLabNu
         // métodos da classe
         public void Inserir()
         {
-            var cmd = Banco.Abrir();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_usuario_inserir";
-            cmd.Parameters.AddWithValue("_nome", Nome);
-            cmd.Parameters.AddWithValue("_senha", Senha);
-            cmd.Parameters.AddWithValue("_email", Email);
-            cmd.Parameters.AddWithValue("_nivel", Nivel);
-            Id = Convert.ToInt32(cmd.ExecuteScalar());
-            cmd.Connection.Close();
+            try
+            {
+                var cmd = Banco.Abrir();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_usuario_inserir";
+                cmd.Parameters.AddWithValue("_nome", Nome);
+                cmd.Parameters.AddWithValue("_senha", Senha);
+                cmd.Parameters.AddWithValue("_email", Email);
+                cmd.Parameters.AddWithValue("_nivel", Nivel);
+                Id = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Connection.Close();
+            }
+            catch (Exception ex )
+            {
+
+               
+            }
+           
         }
         public static Usuario EfetuarLogin( string email, string senha) 
         {

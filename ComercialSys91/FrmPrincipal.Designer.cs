@@ -44,7 +44,7 @@
             this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.trocarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +52,9 @@
             this.lb_usuario = new System.Windows.Forms.Label();
             this.lb_nome = new System.Windows.Forms.Label();
             this.btn_sair = new System.Windows.Forms.Button();
+            this.toolStripStatusNivellogado = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -180,16 +181,18 @@
             this.fecharToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.fecharToolStripMenuItem.Text = "&Fechar";
             // 
-            // statusStrip1
+            // statusStripMain
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripMain.BackColor = System.Drawing.Color.DodgerBlue;
+            this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSplitButton1,
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1246, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
+            this.toolStripStatusLabel1,
+            this.toolStripStatusNivellogado});
+            this.statusStripMain.Location = new System.Drawing.Point(0, 384);
+            this.statusStripMain.Name = "statusStripMain";
+            this.statusStripMain.Size = new System.Drawing.Size(1246, 22);
+            this.statusStripMain.TabIndex = 3;
+            this.statusStripMain.Text = "statusStrip1";
             // 
             // toolStripSplitButton1
             // 
@@ -206,20 +209,19 @@
             // trocarSessãoToolStripMenuItem
             // 
             this.trocarSessãoToolStripMenuItem.Name = "trocarSessãoToolStripMenuItem";
-            this.trocarSessãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.trocarSessãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trocarSessãoToolStripMenuItem.Text = "Trocar Sessão";
             // 
             // alterarUsuárioToolStripMenuItem
             // 
             this.alterarUsuárioToolStripMenuItem.Name = "alterarUsuárioToolStripMenuItem";
-            this.alterarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alterarUsuárioToolStripMenuItem.Text = "Alterar Usuário";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(122, 17);
-            this.toolStripStatusLabel1.Text = "José Saudades - Caixa";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // lb_usuario
             // 
@@ -254,6 +256,12 @@
             this.btn_sair.UseVisualStyleBackColor = true;
             this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             // 
+            // toolStripStatusNivellogado
+            // 
+            this.toolStripStatusNivellogado.Name = "toolStripStatusNivellogado";
+            this.toolStripStatusNivellogado.Size = new System.Drawing.Size(67, 17);
+            this.toolStripStatusNivellogado.Text = "Usuário Off";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,7 +270,7 @@
             this.Controls.Add(this.btn_sair);
             this.Controls.Add(this.lb_nome);
             this.Controls.Add(this.lb_usuario);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -274,8 +282,8 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStripMain.ResumeLayout(false);
+            this.statusStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +306,7 @@
         private System.Windows.Forms.ToolStripMenuItem caixaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fecharToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStripMain;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem trocarSessãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarUsuárioToolStripMenuItem;
@@ -306,5 +314,6 @@
         private System.Windows.Forms.Label lb_usuario;
         public System.Windows.Forms.Label lb_nome;
         private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusNivellogado;
     }
 }

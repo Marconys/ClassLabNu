@@ -34,6 +34,9 @@ namespace ComercialSys91
             Program.usuario = Usuario.EfetuarLogin(tb_usuario.Text, tb_senha.Text);
             if (Program.usuario.Id > 0)
             {
+                
+                
+
                 this.Close();
             }
             else

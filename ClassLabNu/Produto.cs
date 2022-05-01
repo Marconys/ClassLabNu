@@ -57,14 +57,14 @@ namespace ClassLabNu
         }
 
 
-        public Produto(string descricao, string unidade, string codbar, double valor, double desconto)
+        public Produto(string descricao, string unidade, string codbar, double valor, double desconto, bool descontinuado)
         {
             this.Descricao = descricao;
             this.Unidade = unidade;
             this.Codbar = codbar;
             this.Valor = valor;
             this.Desconto = desconto;
-
+            this.Descontinuado = descontinuado;
         }
         public Produto(int id, string descricao, string unidade, string codbar, double valor, double desconto, bool descontinuado)
         {
@@ -95,9 +95,9 @@ namespace ClassLabNu
             cmd.Parameters.AddWithValue("_unidade", Unidade);
             cmd.Parameters.AddWithValue("_codbar", Codbar);
             cmd.Parameters.AddWithValue("_valor", Valor);
-            cmd.Parameters.AddWithValue("_desconto", Desconto);
+            cmd.Parameters.AddWithValue("_desconto", Desconto);                      
             cmd.Parameters.AddWithValue("_descontinuado", Descontinuado);
-            cmd.ExecuteNonQuery();
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
             // Fecha Conexão
             cmd.Connection.Close();
 

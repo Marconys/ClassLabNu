@@ -23,21 +23,31 @@ namespace ComercialSys91
         {
            
 
-            Usuario usuario = new Usuario(txtNome.Text, txtEmail.Text, txtSenha.Text);
+            Usuario usuario = new Usuario(txtNome.Text, 
+                txtEmail.Text, 
+                txtSenha.Text
+                );
              
 
 
             usuario.Inserir();
 
-            if (usuario.Id > 0)
+            try
             {
-                
-                MessageBox.Show("Cliente gravado com sucesso!");
+                if (usuario.Id > 0)
+                {
+
+                    MessageBox.Show("Cliente gravado com sucesso!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Falha ao inserir cliente.");
+
+                MessageBox.Show("Cliente gravado com sucesso!" + Text, ex.Message);
             }
+
+            
+            
 
 
         }
@@ -104,6 +114,11 @@ namespace ComercialSys91
         }
 
         private void FUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_nivel_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

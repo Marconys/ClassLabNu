@@ -251,7 +251,7 @@
             // 
             // Statuscl
             // 
-            this.Statuscl.HeaderText = "Disponível";
+            this.Statuscl.HeaderText = "Status";
             this.Statuscl.Name = "Statuscl";
             // 
             // FProduto

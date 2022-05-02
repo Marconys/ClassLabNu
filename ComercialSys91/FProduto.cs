@@ -102,6 +102,7 @@ namespace ComercialSys91
                 dgv_produtos.Rows.Clear();
                 List<Produto> listadeprodutos = Produto.Listar();
                 int cont = 0;
+                
                 foreach (Produto produtos in listadeprodutos)
                 {
                     dgv_produtos.Rows.Add();
@@ -113,8 +114,23 @@ namespace ComercialSys91
                     dgv_produtos.Rows[cont].Cells[5].Value = produtos.Desconto.ToString();
                     dgv_produtos.Rows[cont].Cells[6].Value = produtos.Descontinuado;
 
+                    // Condição que retornar com a disponibilidade do produto listado
+                    if (produtos.Descontinuado)
+                    {
+                        dgv_produtos.Rows[cont].Cells[6].Value = "Disponível";
+                    }
+                    else
+                    {
+                        dgv_produtos.Rows[cont].Cells[6].Value = "Indisponível";
+                    }
+
                     cont++;
+
+
+                    
                 }
+
+                
 
             }
             catch (Exception ex )
@@ -127,7 +143,7 @@ namespace ComercialSys91
 
         private void dgv_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void cb_disponivel_CheckedChanged(object sender, EventArgs e)

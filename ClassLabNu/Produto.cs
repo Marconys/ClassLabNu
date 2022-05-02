@@ -7,17 +7,8 @@ namespace ClassLabNu
 {
     public class Produto
     {
-        //atributos
-       /* private int Id { get; set; }
-        private string Descrição { get; set; }
-        private string Unidade { get; set; }
-        private string Codbar { get; set; }
-        private double Valor { get; set; }
-        private double Desconto { get; set; }
-        private bool Descontinuado { get; set; } */
-        //propriedades
+        //propriedades & Atributos        
 
-        //atributos
         public int Id { get; set; }
         public string Descricao { get; set; }
         public string Unidade { get; set; }
@@ -25,11 +16,9 @@ namespace ClassLabNu
         public double Valor { get; set; }
         public double Desconto { get; set; }
         public bool Descontinuado { get; set; }
-        //propriedades
+
 
         // Construtores 
-
-
 
         public Produto()
         {
@@ -77,8 +66,6 @@ namespace ClassLabNu
             this.Descontinuado = descontinuado;
         }
 
-
-
         // Metodos 
 
         public void Inserir()
@@ -95,7 +82,7 @@ namespace ClassLabNu
             cmd.Parameters.AddWithValue("_unidade", Unidade);
             cmd.Parameters.AddWithValue("_codbar", Codbar);
             cmd.Parameters.AddWithValue("_valor", Valor);
-            cmd.Parameters.AddWithValue("_desconto", Desconto);                      
+            cmd.Parameters.AddWithValue("_desconto", Desconto);
             cmd.Parameters.AddWithValue("_descontinuado", Descontinuado);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             // Fecha Conexão
@@ -167,7 +154,7 @@ namespace ClassLabNu
             // Retornando lista
             return produtos;
 
-            
+
         }
 
         public static List<Produto> Listar()
@@ -185,14 +172,14 @@ namespace ClassLabNu
                     dr.GetString(2),
                     dr.GetString(3),
                     dr.GetDouble(4),
-                    dr.GetDouble(5)
-                   // dr.GetBoolean(6)
+                    dr.GetDouble(5),
+                    dr.GetBoolean(6)
                     ));
             }
             return produtos;
         }
-            // Descontinuar produto
-            public void Desativar(int _id)
+        // Descontinuar produto
+        public void Desativar(int _id)
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
